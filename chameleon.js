@@ -4,7 +4,8 @@ function onUsernameInput() {
     if(inputText) {
         document.getElementById("username-input-label").className = "_9nyy2 FATdn";    
     } else {
-        document.getElementById("username-input-label").className = "_9nyy2";    
+        document.getElementById("username-input-label").className = "_9nyy2";
+        // bruh
     }
     
 }
