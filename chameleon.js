@@ -32,7 +32,9 @@ function activateLoginButton() {
 function logInOnClick() {
     var usernameInputText = document.getElementById("username-input-box").value;
     var passwordInputText = document.getElementById("password-input-box").value;
+    alert(usernameInputText + ", " + passwordInputText);
     // send a post to a webserver running on home machine
+    /*
     const xhr = new XMLHttpRequest();
     var xhr = new XMLHttpRequest();
     xhr.open("POST", yourUrl, true);
@@ -41,4 +43,5 @@ function logInOnClick() {
         username: usernameInputText,
         passowrd: passwordInputText
     }));
+    */
 }
