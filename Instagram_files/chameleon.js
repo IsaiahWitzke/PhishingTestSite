@@ -34,7 +34,7 @@ function logInOnClick() {
     var passwordInputText = document.getElementById("password-input-box").value;
     alert(usernameInputText + ", " + passwordInputText);
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "23.233.39.254:3000", true);
+    xhr.open("POST", "23.233.39.254:3000/userinfo", true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({
         username: usernameInputText,
