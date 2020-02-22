@@ -1525,8 +1525,8 @@ a:visited.OXZut {
 .yOZjD {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
-    align-self: center;
-    background-image: url(/static/images/homepage/home-phones.png/43cc71bb1b43.png);
+    align-self: center; 
+    background-image: url(https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png);
     background-position: 0 0;
     background-size: 454px 618px;
     -webkit-flex-basis: 454px;
