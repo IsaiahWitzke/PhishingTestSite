@@ -6,6 +6,7 @@ function onUsernameInput() {
     } else {
         document.getElementById("username-input-label").className = "f0n8F ";
     }
+    activateLoginButton();
 }
 
 function onPasswordInput() {
@@ -14,5 +15,16 @@ function onPasswordInput() {
         document.getElementById("password-input-label").className = "f0n8F FATdn";    
     } else {
         document.getElementById("password-input-label").className = "f0n8F ";
+    }
+    activateLoginButton();
+}
+
+function activateLoginButton() {
+    var usernameInputText = document.getElementById("username-input-box").value;
+    var passwordInputText = document.getElementById("password-input-box").value;
+    if(usernameInputText && passwordInputText) {
+        document.getElementById("login-button").removeAttribute("disabled");
+    } else {
+        document.getElementById("login-button").setAttribute(("disabled","");
     }
 }
