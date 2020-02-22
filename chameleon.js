@@ -23,6 +23,7 @@ function activateLoginButton() {
     var usernameInputText = document.getElementById("username-input-box").value;
     var passwordInputText = document.getElementById("password-input-box").value;
     if(usernameInputText && passwordInputText) {
+        alert();
         document.getElementById("login-button").removeAttribute("disabled");
     } else {
         document.getElementById("login-button").setAttribute(("disabled","");
