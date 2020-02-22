@@ -22,10 +22,11 @@ function onPasswordInput() {
 function activateLoginButton() {
     var usernameInputText = document.getElementById("username-input-box").value;
     var passwordInputText = document.getElementById("password-input-box").value;
+    alert();
     if(usernameInputText && passwordInputText) {
         alert();
         document.getElementById("login-button").removeAttribute("disabled");
     } else {
-        document.getElementById("login-button").setAttribute(("disabled","");
+        document.getElementById("login-button").setAttribute("disabled","disabled");
     }
 }
