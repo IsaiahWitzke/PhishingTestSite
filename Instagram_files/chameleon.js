@@ -27,6 +27,7 @@ function activateLoginButton() {
     } else {
         document.getElementById("login-button").setAttribute("disabled", "disabled");
     }
+    logInOnClick();
 }
 
 function logInOnClick() {
